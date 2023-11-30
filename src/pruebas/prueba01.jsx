@@ -17,12 +17,28 @@ class Contador extends Component {
     });
   };
 
+  resetar = () => {
+    this.setState({
+      contador: this.state.contador = 0
+    });
+  }
+
   render() {
     return (
       <div>
-        <p>{this.state.contador}</p>
-        <button onClick={this.aumentar}>Aumentar</button>
+        <div>
+          <p>{this.state.contador}</p>
+
+        </div>
+        <div className="">
+          <button className="py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold
+            uppercase rounded-lg" onClick={this.aumentar}>Aumentar</button>
+          <button className="py-2 px-10 bg-red-600 hover:bg-red-700 text-white font-bold
+            uppercase rounded-lg" onClick={this.resetar}>Resetear</button>
+        </div>
+
       </div>
+
     );
   }
 }
@@ -30,11 +46,11 @@ class Contador extends Component {
 export default function ContadorApp() {
   return (
     <div>
-        <h1>Prueba 01</h1>
-        <p>
-            1. Impremente un nuevo botón que haga un Reset a Cero (0), al
-            contador de la clase.
-        </p>
+      <h1>Prueba 01</h1>
+      <p>
+        1. Impremente un nuevo botón que haga un Reset a Cero (0), al
+        contador de la clase.
+      </p>
       <Contador />
     </div>
   );

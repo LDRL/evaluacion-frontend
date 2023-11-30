@@ -25,11 +25,17 @@ class Blog extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.articles.map(article => {
-          return <p>{article.title}</p>;
-        })}
-      </div>
+      
+        <div>
+          {this.state.articles.map(article => {
+            return (
+              <div className='mx-5 my-10 bg-white shadow-md px-5 py-10 rounded-xl' key={article.id}>
+                <h2 className='font-black text-3xl text-center'>{article.title}</h2>
+                <p className='text-xl mt-5 mb-10 text-center'>{article.body}</p>
+              </div>
+            );
+          })}
+        </div>
     );
   }
 }
@@ -37,18 +43,18 @@ class Blog extends Component {
 export default function BlogApp() {
   return (
     <div>
-        <h1>Prueba 03</h1>
-        <p>
+      <h1>Prueba 03</h1>
+      <p>
         1. Revise y entienda que hace el siguiente componente
-        </p>
-        <p>
+      </p>
+      <p>
         2. Usando cualquier técnica de maquetación web, mejore
-            la presentación de los datos al usuario
-        </p>
-        <p>
+        la presentación de los datos al usuario
+      </p>
+      <p>
         3. Resuelva el Warning: Each child in a list should have a unique "key" prop.
-        </p>
-        <hr />
+      </p>
+      <hr />
       <Blog />
     </div>
   );
