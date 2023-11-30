@@ -1,10 +1,10 @@
 # Evaluación Frontend.
 ## Luis Daniel Reyes López
 
-## prueba 01
+## prueba 01 y prueba 02
 ![Descripción de la imagen](/src/img/image1.png)
 
-## prueba 02
+## prueba 03
 ![Descripción de la imagen](/src/img/image2.png)
 
 ## prueba 03
